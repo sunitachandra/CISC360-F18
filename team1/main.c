@@ -6,7 +6,8 @@
 #include <unistd.h>
 #define trials 10
 #define randRange 1000
-#define loops 20000000
+#define loops 200000000
+#define randMax 32767
 double variance(int* array);
 int min(int* array);
 int max(int* array);
@@ -18,6 +19,30 @@ double variance(int* array) {
 		var += (double)((avg-array[i])*(avg-array[i]));
 	}
 	return var/randRange;
+}
+
+int leastCommonNumber(int* array) {
+	int m = loops+1;
+	int ind = -5;
+	for(int i = 0; i<randRange; i++) {
+		if(array[i] < m) {
+			m = array[i];
+			ind = i;
+		}
+	}
+	return ind;
+}
+
+int mostCommonNumber(int* array) {
+	int m = -1;
+	int ind = -5;
+	for(int i = 0; i<randRange; i++) {
+		if(array[i] > m) {
+			m = array[i];
+			ind = i;
+		}
+	}
+	return ind;
 }
 
 int min(int* array) {
@@ -40,7 +65,21 @@ int max(int* array) {
 	return m;
 }
 
+double weightOfFirstHalf(int* array) {
+	int half = randRange/2;
+	int firstSum = 0;
+	int secondSum = 0;
+	for(int i = 0; i<half; i++) {
+		firstSum += array[i];
+	}
+	for(int i = half; i<randRange; i++) {
+		secondSum += array[i];
+	}
+	return (double)firstSum/secondSum;
+}
+
 int main(int argc, const char* argv[]){
+	srand(time(0));
 	double avgVariance = 0.0;
 	double avgTime = 0.0;
 	double avgMin = 0.0;
@@ -67,7 +106,7 @@ int main(int argc, const char* argv[]){
 		int counts[randRange] = {0};
 		clock_t begin = clock();
 		for(int i = 0; i<loops; i++) {
-			counts[rand()%randRange] += 1;
+			counts[((rand() * (randMax-1)) + rand())%randRange] += 1;
 		}
 		clock_t end = clock();
 		timeElasped += (double)(end-begin) / CLOCKS_PER_SEC;
@@ -77,6 +116,8 @@ int main(int argc, const char* argv[]){
 		int mini = min(counts);
 		int maxi = max(counts);
 		printf("\tMin: %d \n\tMax: %d\n", mini, maxi);
+		printf("\tLeast Common: %d \n\tMost Common: %d \n", leastCommonNumber(counts), mostCommonNumber(counts));
+		printf("\tRatio of first half to second half: %.5f \n", weightOfFirstHalf(counts));
 		avgVariance += var/trials;
 		if(var < minVariance) {
 			minVariance = var;
