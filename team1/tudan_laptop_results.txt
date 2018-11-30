@@ -1,0 +1,96 @@
+Trial 0
+        Time elapsed: 5.74s
+        Variance: 156892.33
+        Min: 198795
+        Max: 201282
+        Least Common: 808
+        Most Common: 867
+        Ratio of first half to second half: 1.00011
+Trial 1
+        Time elapsed: 5.74s
+        Variance: 158413.43
+        Min: 198766
+        Max: 201151
+        Least Common: 584
+        Most Common: 228
+        Ratio of first half to second half: 0.99995
+Trial 2
+        Time elapsed: 5.75s
+        Variance: 152622.93
+        Min: 198826
+        Max: 201284
+        Least Common: 473
+        Most Common: 619
+        Ratio of first half to second half: 0.99999
+Trial 3
+        Time elapsed: 5.74s
+        Variance: 159199.54
+        Min: 198949
+        Max: 201370
+        Least Common: 613
+        Most Common: 660
+        Ratio of first half to second half: 1.00012
+Trial 4
+        Time elapsed: 5.74s
+        Variance: 153695.52
+        Min: 198625
+        Max: 201343
+        Least Common: 581
+        Most Common: 67
+        Ratio of first half to second half: 0.99976
+Trial 5
+        Time elapsed: 5.75s
+        Variance: 156522.27
+        Min: 198684
+        Max: 201486
+        Least Common: 320
+        Most Common: 613
+        Ratio of first half to second half: 1.00025
+Trial 6
+        Time elapsed: 5.75s
+        Variance: 161759.63
+        Min: 198797
+        Max: 201228
+        Least Common: 973
+        Most Common: 794
+        Ratio of first half to second half: 0.99979
+Trial 7
+        Time elapsed: 5.78s
+        Variance: 153058.43
+        Min: 198685
+        Max: 201255
+        Least Common: 72
+        Most Common: 191
+        Ratio of first half to second half: 1.00003
+Trial 8
+        Time elapsed: 5.97s
+        Variance: 155889.79
+        Min: 198490
+        Max: 201604
+        Least Common: 354
+        Most Common: 330
+        Ratio of first half to second half: 1.00004
+Trial 9
+        Time elapsed: 6.10s
+        Variance: 157546.19
+        Min: 198762
+        Max: 201420
+        Least Common: 389
+        Most Common: 290
+        Ratio of first half to second half: 0.99994
+
+**************Trials Complete***************
+Performed 10 trials of 200000000 loops at modulo 1000
+Average Variance: 156560.01
+        Min Variance: 152622.93
+        Max Variance: 161759.63
+Average std deviation: 395.68
+Average Time: 5.81
+        Min Time: 5.74
+        Max Time: 6.10
+Average Max: 201339.00
+        Min Max: 201151.00
+        Max Max: 201604.00
+Average Min: 198733.00
+        Min Min: 198490.00
+        Max Min: 198949.00
