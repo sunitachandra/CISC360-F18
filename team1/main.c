@@ -153,7 +153,6 @@ int main(int argc, const char* argv[]){
 	printf("Average Variance: %.2f\n", avgVariance);
 	printf("\tMin Variance: %.2f\n", minVariance);
 	printf("\tMax Variance: %.2f\n", maxVariance);
-	printf("Average std deviation: %.2f\n", sqrt(avgVariance));
 	printf("Average Time: %.2f\n", avgTime);
 	printf("\tMin Time: %.2f\n", minTime);
 	printf("\tMax Time: %.2f\n", maxTime);
